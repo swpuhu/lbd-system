@@ -3,13 +3,12 @@ import {Link} from 'react-router-dom';
 import './Collapse.css';
 class ListItem extends React.Component {
   componentDidMount () {
-    console.log(this.listItem);
   }
   render() {
     let className = this.props.className ? this.props.className : ''
     let lineHeight = 28;
     return (
-      <div className={(this.props.active ? 'active' : 'disabled' + ` ${className} list-wrapper`)}>
+      <div className={(this.props.active ? 'active' : 'disabled' + " " + className + " list-wrapper")}>
         <div onClick={this.props.onClick} className="list-title">{this.props.items.title}</div>
         <ul className={"item-wrapper"} style={{
           height: this.props.active ? lineHeight * this.props.items.children.length : 0
@@ -85,7 +84,7 @@ CollapseMenu.defaultProps = {
     {
       title: 'test',
       children: [
-        {name: 'sub-title1', path: '/test'},
+        {name: 'sub-title1', path: '/getArticle'},
         {name: 'sub-title2', path: '/home'}
       ]
     }

@@ -1,0 +1,18 @@
+.calendar-title {
+  display: flex;
+}
+.calendar,
+.calendar-input {
+  width: 200px;
+}
+
+
+.calendar-title .left-btn,
+.calendar-title .right-btn  {
+  flex: 0 1 30px;
+}
+
+.calendar-title .title {
+  flex: 1;
+  text-align: center;
+}
